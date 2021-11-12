@@ -24,6 +24,7 @@
     "axios": "^0.24.0",
     "cloudinary-react": "^1.7.0",
     "react-cloudinary-upload-widget": "^1.4.3",
-    "mongoose": "^6.0.12"
+    "mongoose": "^6.0.12",
+    "express": "^4.17.1"
   }
 }
