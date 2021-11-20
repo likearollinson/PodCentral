@@ -52,7 +52,20 @@ export const ADD_EPISODE = gql`
       duration
       season
       episode
-      createdAt
+    }
+  }
+`;
+
+export const LIKE_PODCAST = gql`
+  mutation likePodcast($input: likedPodcast!) {
+    likePodcast(input: $input) {
+      _id
+      email
+      likedPodcasts {
+        title
+        description
+        image
+      }
     }
   }
 `;

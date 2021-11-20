@@ -1,7 +1,7 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #232f3e;
+  --secondary: #f3a847;
+  --tertiary: #b12704;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -21,7 +21,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -91,7 +91,7 @@ button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -100,12 +100,12 @@ button {
 }
 
 button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 button[disabled] {
   cursor: default;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 img {
@@ -131,7 +131,7 @@ input {
 
 input:focus {
   border: 1px solid var(--secondary);
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -201,13 +201,23 @@ input:focus {
 
 .podCard {
   /* color: #17141d; */
-  transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .podCard:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
+}
+
+.podCardTwo {
+  transition: all 0.1s ease-in-out;
+}
+
+.podCardTwo:hover {
+  transform: scaleX(0.9);
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
 }
 
 .cardColor {
@@ -236,8 +246,47 @@ input:focus {
   justify-content: center;
 }
 
+.profileName {
+  font-size: 26px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.profileFollowers {
+  font-size: 18px;
+  font-weight: lighter;
+  /* letter-spacing: 2px; */
+}
+
+.followerCount {
+  font-size: 26px;
+  font-weight: lighter;
+}
+
+.follower {
+  font-size: 16px;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+}
+
 .boxColor {
   background-color: #17141d;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.textShadow {
+  text-shadow: 2px 0 10px black;
+}
+
+.center1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .wYl-font {
@@ -246,36 +295,198 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 50px;  
 }
 
 .wYl-font2 {
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  margin-right: 50px;
   font-size: 24px;
 }
 
 .navDown {
   /* transition: transform 20s ease-out; */
-  
   /* position: static; */
   /* height: 300px; */
   /* top: 35%; */
   /* right: 10%; */
   /* z-index: -1; */
   transition: transform 250ms ease-in-out;
-  content: '';
-  border-bottom: solid 3px #019fb6;  
-  transform: scaleX(0px); 
+  content: "";
+  border-bottom: solid 3px #019fb6;
+  transform: scaleX(0px);
 }
 
 .navDown:hover {
-  transform: translateY(50px); 
+  transform: translateY(50px);
   transition: height 20s;
-  position:relative;
+  position: relative;
   height: 200px;
+}
+
+.zIndex-1 {
+  z-index: 1;
+}
+
+.zIndex-0 {
+  z-index: 0;
+}
+
+.scrollBar {
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+}
+
+.scrollBar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  background: #201c29;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.scrollBar::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+}
+
+.pStyling {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 21px;
+  letter-spacing: 2px;
+  line-height: 30px;
+  font-weight: lighter;
+  margin-left: 400px;
+  margin-right: 400px;
+  padding-top: 25px;
+}
+
+.flex1 {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: row;
+}
+
+.flex {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: row;
+}
+
+.boxCenter {
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* flex-direction: row; */
+  /* position: relative; */
+}
+
+.boxCenter2 {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  /* top: 728px; */
+  /* text-align: end; */
+}
+
+.publish {
+  color: #f5b727;
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
+.discover {
+  color: #f5b727;
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  /* border: 1px solid black; */
+  /* font-size: 70px; */
+  /* font-weight: normal; */
+  /* letter-spacing: 3px; */
+  /* line-height: 2px; */
+  /* height: 100px; */
+  /* margin-bottom: 20px; */
+}
+
+.pStyling1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-top: 5px; */
+  margin-top: 40px;
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  color: #f5b727;
+  /* border: 1px solid red; */
+}
+
+.grow {
+  width: 45%;
+  /* height: 100%; */
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+.grow1 {
+  /* width: 50%; */
+  /* height: 100%; */
+  transition: all 0.2s ease-in-out;
+}
+
+.grow1:hover {
+  transform: scale(1.1);
+}
+
+/* .hoverLeft {
+  transform: all 10s ease-in-out;
+}
+
+.hoverLeft:hover {
+  /* transition: all .5s ease; */
+/* transform: translateX(150px) */
+/* } */
+
+.likeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #f5b727;
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #17141d;
+  transition: all 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {

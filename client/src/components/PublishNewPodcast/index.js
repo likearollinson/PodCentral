@@ -1,19 +1,16 @@
 import * as React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useQuery, useMutation } from "@apollo/client";
-import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Grow from "@mui/material/Grow";
-import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import Input from "@mui/material/Input";
-// import FileUploadIcon from '@mui/icons-material/FileUploadIcon';
 import { GET_ME } from "../../utils/queries";
 import { ADD_PODCAST } from "../../utils/mutations";
 import PublishProfile from "../PublishProfile";
 import CloudinaryWidget from "../Cloudinary";
-import Auth from "../../utils/auth";
+
 const PublishNewPodcast = () => {
   const { loading, data } = useQuery(GET_ME);
   const userData = data?.me || [];
@@ -27,13 +24,15 @@ const PublishNewPodcast = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    // if()
+    const podcastImage = localStorage.getItem("podcastImage");
+    // console.log(podcastImage);
     try {
       const { data } = await addPodcast({
         variables: {
-          input: { ...formState },
+          input: { ...formState, image: podcastImage },
         },
       });
+      window.location.reload();
     } catch (err) {
       console.log(err);
     }
@@ -46,10 +45,12 @@ const PublishNewPodcast = () => {
       [name]: value,
     });
   };
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   if (!userData?.addedPodcast) {
     return (
-      // <WidgetLoader>
-      <Box sx={{ flexGrow: 1 }}>
+      <div>
         <Grow
           style={{ transformOrigin: "0 0 0" }}
           {...{ timeout: 2000 }}
@@ -95,49 +96,95 @@ const PublishNewPodcast = () => {
             let's start a podcast profile!
           </Typography>
         </Grow>
-        <Grow
-          style={{ transformOrigin: "0 0 0" }}
-          {...{ timeout: 11000 }}
-          in={true}
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          pt={5}
         >
-          <Box sx={{ flexGrow: 1 }} justify="center">
-            <div className="flex-row space-between my-2">
-              <label htmlFor="title">Title: </label>
-              <Input
+          <Grid item>
+            <Grow
+              style={{ transformOrigin: "0 0 0" }}
+              {...{ timeout: 11000 }}
+              in={true}
+            >
+              <TextField
                 placeholder="Your Podcast"
+                label="Title"
                 name="title"
                 type="title"
                 id="title"
                 onChange={handleChange}
               />
-            </div>
-            <div className="flex-row space-between my-2">
-              <label htmlFor="description">Description: </label>
+            </Grow>
+          </Grid>
+          <Grid item pt={1}>
+            <Grow
+              style={{ transformOrigin: "0 0 0" }}
+              {...{ timeout: 11000 }}
+              in={true}
+            >
               <TextField
                 multiline
                 rows={5}
-                variant="standard"
-                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum orci eu elit aliquam maximus."
+                label="Description"
+                placeholder="Descriptiom"
                 name="description"
                 type="description"
                 id="description"
                 onChange={handleChange}
               />
-            </div>
-            <div className="flex-row space-between my-2">
-              <label htmlFor="image">Upload Image: </label>
-            </div>
-            <div className="flex-row flex-end">
-              <CloudinaryWidget />
-            </div>
-          </Box>
-        </Grow>
-      </Box>
+            </Grow>
+          </Grid>
+          <Grid item>
+            <Grow
+              style={{ transformOrigin: "0 0 0" }}
+              {...{ timeout: 11000 }}
+              in={true}
+            >
+              <Typography
+                variant="p"
+                component="div"
+                pt={2}
+                sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+                align="center"
+              >
+                Upload Image
+              </Typography>
+            </Grow>
+          </Grid>
+          <Grid item>
+            <Grow
+              style={{ transformOrigin: "0 0 0" }}
+              {...{ timeout: 11000 }}
+              in={true}
+            >
+              <div>
+                <CloudinaryWidget />
+              </div>
+            </Grow>
+          </Grid>
+          <Grid item pt={1}>
+            <Grow
+              style={{ transformOrigin: "0 0 0" }}
+              {...{ timeout: 11000 }}
+              in={true}
+            >
+              <Button
+                variant="contained"
+                sx={{ backgroundColor: "black" }}
+                type="submit"
+                onClick={handleFormSubmit}
+              >
+                Submit
+              </Button>
+            </Grow>
+          </Grid>
+        </Grid>
+      </div>
     );
-  }
-
-  if (loading) {
-    return <h2>LOADING...</h2>;
   }
   return (
     // The view if a user has a podcast
