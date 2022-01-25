@@ -46,7 +46,7 @@ function Login(props) {
         alignItems="center"
         justifyContent="center"
         backgroundColor=""
-        // sx={{ border: 1 }}
+      // sx={{ border: 1 }}
       >
         <Box
           flexGrow={1}
@@ -67,7 +67,7 @@ function Login(props) {
                 color="white"
                 sx={{ fontWeight: 'lighter', fontSize: '26px', letterSpacing: "1px" }}
               >
-                Log in to continue
+                Login to Continue
               </Typography>
             </Grid>
             <Grid mt={4}>

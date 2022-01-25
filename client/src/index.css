@@ -489,6 +489,16 @@ input:focus {
   transition: all 0.2s ease-in-out;
 }
 
+.imgbox {
+  display: grid;
+  height: 100%;
+}
+
+.center-fit {
+  max-height: 100vh;
+  max-width: 100%;
+  margin: auto;
+}
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
