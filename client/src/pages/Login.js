@@ -38,15 +38,6 @@ const Login = (props) => {
   return (
 
     <div>
-      {/* <Typography
-        variant="h4"
-        color="black"
-        sx={{ fontWeight: 'lighter', fontSize: '26px', letterSpacing: "1px" }}
-        align="center"
-        marginTop="70px"
-      >
-        Sign In to Continue
-      </Typography> */}
       <Box
         mt="70px"
         display="flex"
@@ -126,11 +117,13 @@ const Login = (props) => {
                   bgcolor: '#17141f',
                   boxShadow: '-1rem 0 3rem #000',
                   borderColor: 'black',
+                  whiteSpace: "nowrap",
+                  minWidth: "max-content"
                 }}
                 type="submit"
                 marginRight="20px"
               >
-                Log in
+                Sign In
               </Button>
               <Button
                 variant="text"
