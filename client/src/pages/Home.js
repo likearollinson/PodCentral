@@ -70,80 +70,95 @@ const Home = () => {
             s={12}
             md={6}
             lg={6}
-            sx={{
-              border: 1,
-              backgroundColor: '#17141d',
-              boxShadow: '-1rem 0 3rem #000',
-            }}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
           >
-            <Typography
-              variant="h4"
-              letterSpacing="2px"
-              color="#f5b727"
-              fontWeight="lighter"
-              align="center"
-            >
-              Publish
-            </Typography>
-            <Typography
-              fontSize="h6"
-              fontWeight="lighter"
-              align="center"
-              color="white"
-            >
-              Upload your own podcast in just a few easy steps. We take care of the hard parts so you can focus on making your best podcast.
-            </Typography>
             <Box
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              marginTop="20px"
+              margin="10px 10px 10px 10px"
+              sx={{
+                border: 1,
+                backgroundColor: '#17141d',
+                boxShadow: '-1rem 0 3rem #000',
+                width: "250px",
+                height: "250px"
+              }}
             >
-              <Button
-                className="hoverLeft"
-                size="large"
-                component={Link}
-                to="/publish"
-                sx={{
-                  backgroundColor: '#f5b727',
-                  border: 1,
-                  borderColor: 'black',
-                }}
-                variant="contained"
+              <Typography
+                variant="h4"
+                letterSpacing="2px"
+                color="#f5b727"
+                fontWeight="lighter"
                 align="center"
               >
-                <Typography color="black" fontWeight="bold">
-                  Publish
+                Publish
+              </Typography>
+              <Box
+                margin="25px 5px 25px 5px"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Typography
+                  fontSize="h7"
+                  fontWeight="lighter"
+                  align="center"
+                  color="white"
+                >
+                  Upload your own podcast in just a few easy steps. We take care of the hard parts so you can focus on making your best podcast.
                 </Typography>
-              </Button>
+              </Box>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Button
+                  className="hoverLeft"
+                  size="large"
+                  component={Link}
+                  to="/publish"
+                  sx={{
+                    backgroundColor: '#f5b727',
+                    border: 1,
+                    borderColor: 'black',
+                  }}
+                  variant="contained"
+                  align="center"
+                >
+                  <Typography color="black" fontWeight="bold">
+                    Publish
+                  </Typography>
+                </Button>
+              </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} s={12} md={6} lg={6} justify="center">
+          <Grid
+            item
+            xs={12}
+            s={12}
+            md={6}
+            lg={6}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Box
               display="flex"
               justifyContent="center"
-              alignItems="center"
-              sx={{ height: "auto", width: "auto" }}
+              margin="10px 10px 10px 10px"
+              sx={{
+                border: 1,
+                boxShadow: '-1rem 0 3rem #000',
+                height: "auto",
+                maxWidth: "250px"
+              }}
             >
               <img
                 src={podcast2017}
                 alt="podcast cover art"
                 margin="10px 10px 10px 10px"
-              ></img>
-            </Box>
-          </Grid>
-          <Grid item xs={12} s={12} md={6} lg={6}>
-            <Box
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              sx={{ height: "auto", width: "auto" }}
-            >
-              <img
-                src={podcast2019}
-                alt="podcast cover art"
-                margin="10px 10px 10px 10px"
-                align="center"
+                sx={{ justifyContent: "center" }}
               ></img>
             </Box>
           </Grid>
@@ -153,52 +168,98 @@ const Home = () => {
             s={12}
             md={6}
             lg={6}
-            sx={{
-              border: 1,
-              backgroundColor: '#17141d',
-              boxShadow: '-1rem 0 3rem #000',
-            }}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
           >
-            <Typography
-              variant="h4"
-              letterSpacing="2px"
-              color="#f5b727"
-              fontWeight="lighter"
-              align="center"
-            >
-              Discover
-            </Typography>
-
-            <Typography
-              variant="h6"
-              fontWeight="lighter"
-              align="center"
-              color="white"
-            >
-              Browse through our extensive library of podcasts to find something you love. We have a podcast for everyone.
-            </Typography>
             <Box
               display="flex"
               justifyContent="center"
               alignItems="center"
-              marginTop="20px"
+              margin="10px 10px 10px 10px"
+              sx={{
+                border: 1,
+                boxShadow: '-1rem 0 3rem #000',
+                height: "auto",
+                maxWidth: "250px"
+              }}
             >
-              <Button
-                className="hoverLeft"
-                size="large"
-                component={Link}
-                to="/publish"
-                sx={{
-                  backgroundColor: '#f5b727',
-                  border: 1,
-                  borderColor: 'black',
-                }}
-                variant="contained"
+              <img
+                src={podcast2019}
+                alt="podcast cover art"
+                margin="10px 10px 10px 10px"
+                alignItems="center"
+              ></img>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            s={12}
+            md={6}
+            lg={6}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Box
+              margin="10px 10px 10px 10px"
+              justifyContent="center"
+              alignItems="center"
+              sx={{
+                border: 1,
+                backgroundColor: '#17141d',
+                boxShadow: '-1rem 0 3rem #000',
+                width: "250px",
+                height: "250px"
+              }}
+            >
+              <Typography
+                variant="h4"
+                letterSpacing="2px"
+                color="#f5b727"
+                fontWeight="lighter"
+                align="center"
               >
-                <Typography color="black" fontWeight="bold">
-                  Discover
+                Discover
+              </Typography>
+              <Box
+                margin="25px 5px 25px 5px"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Typography
+                  variant="h7"
+                  fontWeight="lighter"
+                  align="center"
+                  color="white"
+                >
+                  Browse through our extensive library of podcasts to find something you love. We have a podcast for everyone.
                 </Typography>
-              </Button>
+              </Box>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Button
+                  className="hoverLeft"
+                  size="large"
+                  component={Link}
+                  to="/publish"
+                  sx={{
+                    backgroundColor: '#f5b727',
+                    border: 1,
+                    borderColor: 'black',
+                  }}
+                  variant="contained"
+                >
+                  <Typography color="black" fontWeight="bold">
+                    Discover
+                  </Typography>
+                </Button>
+              </Box>
             </Box>
           </Grid>
         </Grid >
