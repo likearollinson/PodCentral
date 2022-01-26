@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d187bfc5.chunk.css",
+    "main.js": "/static/js/main.9e796945.chunk.js",
+    "main.js.map": "/static/js/main.9e796945.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.776c1e0d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.776c1e0d.js.map",
+    "static/js/2.0d6c96a1.chunk.js": "/static/js/2.0d6c96a1.chunk.js",
+    "static/js/2.0d6c96a1.chunk.js.map": "/static/js/2.0d6c96a1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.d187bfc5.chunk.css.map": "/static/css/main.d187bfc5.chunk.css.map",
+    "static/js/2.0d6c96a1.chunk.js.LICENSE.txt": "/static/js/2.0d6c96a1.chunk.js.LICENSE.txt",
+    "static/media/best-pods-2017.1e44aae0.jpg": "/static/media/best-pods-2017.1e44aae0.jpg",
+    "static/media/best-pods-2019.90abfc39.jpg": "/static/media/best-pods-2019.90abfc39.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.776c1e0d.js",
+    "static/js/2.0d6c96a1.chunk.js",
+    "static/css/main.d187bfc5.chunk.css",
+    "static/js/main.9e796945.chunk.js"
+  ]
+}
