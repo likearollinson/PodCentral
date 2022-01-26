@@ -38,167 +38,150 @@ const Login = (props) => {
   return (
 
     <div>
-      <Grid
-        container
-        spacing={0}
-        display="flex"
-        direction="column"
-        alignItems="center"
-        justifyContent="center"
+      {/* <Typography
+        variant="h4"
+        color="black"
+        sx={{ fontWeight: 'lighter', fontSize: '26px', letterSpacing: "1px" }}
+        align="center"
         marginTop="70px"
       >
-        <Grid item height={500} width={500}>
-          <Grid item display="flex" justifyContent="center">
-            <Typography
-              variant="h4"
-              color="white"
-              sx={{ fontWeight: 'lighter', fontSize: '26px', letterSpacing: "1px" }}
-            >
-              Login to Continue
-            </Typography>
-          </Grid>
-          <Grid mt={4}>
-            <form onSubmit={handleFormSubmit}>
-              <Grid
-                item
-                mt={2}
-                display="flex"
-                justifyContent="center"
-                width={500}
-              >
-                <Box>
-                  <TextField
-                    inputProps={{
-                      style: { fontFamily: 'Arial', color: 'white' },
-                    }}
-                    style={{ width: '350px' }}
-                    variant="outlined"
-                    placeholder="youremail@mail.com"
-                    label="Email"
-                    name="email"
-                    type="email"
-                    id="email"
-                    focused
-                    onChange={handleChange}
-                  />
-                </Box>
-              </Grid>
-              <Grid
-                item
-                display="flex"
-                justifyContent="center"
-                mt={2}
-                width={500}
-              >
-                <Box>
-                  <TextField
-                    inputProps={{
-                      style: { fontFamily: 'Arial', color: 'white' },
-                    }}
-                    style={{ width: '350px' }}
-                    variant="outlined"
-                    placeholder="********"
-                    label="Password"
-                    name="password"
-                    type="password"
-                    id="pwd"
-                    focused
-                    onChange={handleChange}
-                  />
-                </Box>
-              </Grid>
-              {error ? (
-                <div>
-                  <p className="error-text">
-                    The provided credentials are incorrect
-                  </p>
-                </div>
-              ) : null}
-              <Grid
-                item
-                display="flex"
-                justifyContent="center"
-                width={500}
-                mt={2}
-              >
-                <Box
-                  display="flex"
-                  justifyContent="space-between"
-                  style={{ width: '350px' }}
-                >
-                  <Button
-                    className="grow"
-                    variant="contained"
-                    size="medium"
-                    sx={{
-                      backgroundColor: 'black',
-                      paddingLeft: '50px',
-                      paddingRight: '50px',
-                      letterSpacing: '1px',
-                      fontWeight: 'normal',
-                      bgcolor: '#17141f',
-                      boxShadow: '-1rem 0 3rem #000',
-                      border: 1,
-                      borderColor: 'black',
-                    }}
-                    type="submit"
-                  >
-                    Log in
-                  </Button>
-                  <Button
-                    variant="text"
-                    size="medium"
-                    component={Link}
-                    to="/"
-                  >
-                    Forgot Password?
-                  </Button>
-                </Box>
-              </Grid>
-            </form>
-          </Grid>
-          <Grid
-            item
+        Sign In to Continue
+      </Typography> */}
+      <Box
+        mt="70px"
+        display="flex"
+        justifyContent="center"
+      >
+        <form onSubmit={handleFormSubmit}>
+          <Box
+            mt={2}
             display="flex"
             justifyContent="center"
-            mt={5}
-            mb={3}
-            ml={9}
-            mr={9}
-            pb={3}
-            sx={{ borderBottom: 1 }}
           >
-            {/* <Typography letterSpacing={1} fontSize="16px" color="white" fontWeight="lighter">
-                OR
-              </Typography> */}
-          </Grid>
-          <Grid item display="flex" justifyContent="center">
-            <Typography fontSize="22px" color="white" fontWeight="lighter" letterSpacing="1px">
-              Don't have an account?
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Box display="flex" justifyContent="center" mt={2}>
-              <Button
-                variant="contained"
-                size="large"
-                component={Link}
-                to="/signup"
-                sx={{
-                  paddingLeft: '54px',
-                  paddingRight: '54px',
-                  backgroundColor: '#f5b727',
+            <Box>
+              <TextField
+                inputProps={{
+                  style: { fontFamily: 'Arial', color: 'black' },
                 }}
+                style={{ width: '300px' }}
+                variant="outlined"
+                placeholder="youremail@mail.com"
+                label="Email"
+                name="email"
+                type="email"
+                id="email"
+                focused
+                onChange={handleChange}
+              />
+            </Box>
+          </Box>
+          <Box
+            display="flex"
+            justifyContent="center"
+            mt={2}
+          >
+            <Box>
+              <TextField
+                inputProps={{
+                  style: { fontFamily: 'Arial', color: 'black' },
+                }}
+                style={{ width: '300px' }}
+                variant="outlined"
+                placeholder="********"
+                label="Password"
+                name="password"
+                type="password"
+                id="pwd"
+                focused
+                onChange={handleChange}
+              />
+            </Box>
+          </Box>
+          {error ? (
+            <div>
+              <p className="error-text">
+                The provided credentials are incorrect
+              </p>
+            </div>
+          ) : null}
+          <Box
+            display="flex"
+            justifyContent="center"
+            mt={2}
+          >
+            <Box
+              display="flex"
+              justifyContent="space-around"
+              style={{ width: '300px' }}
+            >
+              <Button
+                className="grow"
+                variant="contained"
+                sx={{
+                  backgroundColor: 'black',
+                  paddingLeft: '50px',
+                  paddingRight: '50px',
+                  letterSpacing: '1px',
+                  fontWeight: 'normal',
+                  bgcolor: '#17141f',
+                  boxShadow: '-1rem 0 3rem #000',
+                  borderColor: 'black',
+                }}
+                type="submit"
+                marginRight="20px"
               >
-                <Typography color="black" fontWeight="bold" fontSize="18px">
-                  Sign up for PodCentral
-                </Typography>
+                Log in
+              </Button>
+              <Button
+                variant="text"
+                size="medium"
+                component={Link}
+                to="/"
+                marginLeft="20px"
+              >
+                Forgot Password?
               </Button>
             </Box>
-          </Grid>
-        </Grid>
-      </Grid>
-    </div>
+          </Box>
+        </form>
+      </Box>
+      <Box
+        display="flex"
+        justifyContent="center"
+        mt={5}
+        mb={3}
+        ml={9}
+        mr={9}
+        pb={3}
+        sx={{ borderBottom: 1 }}
+      >
+      </Box>
+      <Box display="flex" justifyContent="center">
+        <Typography fontSize="22px" color="black" fontWeight="lighter" letterSpacing="1px">
+          Don't have an account?
+        </Typography>
+      </Box>
+      <Box>
+        <Box display="flex" justifyContent="center" mt={2}>
+          <Button
+            variant="contained"
+            size="large"
+            component={Link}
+            to="/signup"
+            sx={{
+              paddingLeft: '54px',
+              paddingRight: '54px',
+              backgroundColor: '#f5b727',
+              boxShadow: '-1rem 0 3rem #000'
+            }}
+          >
+            <Typography color="black" fontWeight="bold" fontSize="18px">
+              Sign up for PodCentral
+            </Typography>
+          </Button>
+        </Box>
+      </Box>
+    </div >
   );
 }
 
