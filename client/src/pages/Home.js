@@ -246,7 +246,7 @@ const Home = () => {
                 className="hoverLeft"
                 size="large"
                 component={Link}
-                to="/publish"
+                to="/discover"
                 sx={{
                   backgroundColor: '#f5b727',
                   border: 1,

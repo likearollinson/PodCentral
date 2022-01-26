@@ -82,62 +82,58 @@ const GlobalAppBar = (props) => {
         <React.Fragment>
           <CssBaseline />
           <ElevationScroll {...props}>
-            <AppBar position="static" color={"secondary"}>
-              <Toolbar>
-                <Grid
-                  container
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Grid>
-                    <Typography variant="h6">
-                      <Button
-                        size="large"
-                        component={Link}
-                        color="inherit"
-                        to="/"
-                      >
+            <ThemeProvider theme={darkBar}>
+              <AppBar
+                color={"secondary"}
+              >
+                <Toolbar>
+                  <Grid
+                    container
+                    display="flex"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Grid>
+                      <Button size="large" component={Link} color="inherit" to="/">
                         PodCentral
                       </Button>
-                    </Typography>
+                    </Grid>
+                    <Grid>
+                      <IconButton
+                        component={Link}
+                        to="/publish"
+                        size="large"
+                        align="center"
+                        aria-label="menu"
+                        sx={{ ml: 2, color: "#f5b727" }}
+                      >
+                        <PodcastsIcon />
+                      </IconButton>
+                    </Grid>
+                    <Grid>
+                      <IconButton
+                        size="large"
+                        component={Link}
+                        to="/profile"
+                        edge="end"
+                        aria-label="account of current user"
+                        aria-haspopup="true"
+                        color="inherit"
+                      >
+                      </IconButton>
+                      <IconButton
+                        size="large"
+                        color="inherit"
+                        onClick={() => Auth.logout()}
+                      >
+                        <LogoutIcon />
+                      </IconButton>
+                    </Grid>
                   </Grid>
-                  <Grid>
-                    <IconButton
-                      component={Link}
-                      to="/publish"
-                      size="large"
-                      align="center"
-                      aria-label="menu"
-                      sx={{ ml: 2, color: "#f5b727" }}
-                    >
-                      <PodcastsIcon />
-                    </IconButton>
-                  </Grid>
-                  <Grid>
-                    <IconButton
-                      size="large"
-                      component={Link}
-                      to="/profile"
-                      edge="end"
-                      aria-label="account of current user"
-                      aria-haspopup="true"
-                      color="inherit"
-                    >
-                      <AccountCircle />
-                    </IconButton>
-                    <IconButton
-                      size="large"
-                      color="inherit"
-                      onClick={() => Auth.logout()}
-                    >
-                      <LogoutIcon />
-                    </IconButton>
-                  </Grid>
-                </Grid>
-              </Toolbar>
-            </AppBar>
-          </ElevationScroll>
+                </Toolbar>
+              </AppBar>
+            </ThemeProvider>
+          </ElevationScroll >
         </React.Fragment >
 
       );

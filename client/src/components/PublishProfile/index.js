@@ -278,21 +278,26 @@ const PublishProfile = () => {
               Your Episodes
             </Typography>
           </Grow>
-          {episodeData.map((episode) => {
-            return (
-              <Box flexGrow={1} key={episode._id} pt={3}>
-                <Player
-                  title={episode.title}
-                  audio={episode.audio}
-                  episodeName={episode.title}
-                  seasonNum={episode.season}
-                  episodeNum={episode.episode}
-                  image={podcastImage}
-                  podcastName={podcastName}
-                />
-              </Box>
-            );
-          })}
+          <Box
+            display="flex"
+            justifyContent="center"
+          >
+            {episodeData.map((episode) => {
+              return (
+                <Box flexGrow={1} key={episode._id} pt={3}>
+                  <Player
+                    title={episode.title}
+                    audio={episode.audio}
+                    episodeName={episode.title}
+                    seasonNum={episode.season}
+                    episodeNum={episode.episode}
+                    image={podcastImage}
+                    podcastName={podcastName}
+                  />
+                </Box>
+              );
+            })}
+          </Box>
         </Grid>
       </Grid>
     </Box>

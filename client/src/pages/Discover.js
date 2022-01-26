@@ -109,7 +109,7 @@ const Discover = () => {
 
   if (loading) {
     return (
-      <Box flexGrow={1} sx={{ bgcolor: "#f0eeeb", height: "100vh" }}>
+      <Box flexGrow={1} mt="90px" sx={{ bgcolor: "#f0eeeb", height: "100vh" }}>
         <Typography
           variant="h2"
           component="div"
@@ -156,16 +156,6 @@ const Discover = () => {
           alignItems="center"
         >
           <p className="categories">Categories</p>
-          <Button
-            className="allCategories"
-            variant="text"
-            size="medium"
-            component={Link}
-            to="/allCategories"
-            sx={{ mr: "50px", mb: "10px" }}
-          >
-            BROWSE ALL
-          </Button>
         </Grid>
         <Grid
           container
