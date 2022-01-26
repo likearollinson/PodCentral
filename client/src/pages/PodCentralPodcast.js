@@ -60,7 +60,7 @@ const PodCentralPodcast = () => {
   }
 
   return (
-    <Box flexGrow={1}>
+    <Box flexGrow={1} mt="90px">
       <Grow
         style={{ transformOrigin: "0 0 0" }}
         {...{ timeout: 2000 }}
