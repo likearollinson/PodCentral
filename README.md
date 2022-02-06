@@ -2,7 +2,7 @@
 
 [Repository Link](https://github.com/rmmccar92/PodCentral)
 
-[Deployment Link](https://pod-central.herokuapp.com/)
+[Deployment Link](https://podcentral.herokuapp.com/)
 
 ## Table of Contents
 
@@ -15,11 +15,6 @@
 ## Description
 
 PodCentral is a place for Podcast creators and listeners to collaborate, upload, and interact with their favorite podcasts and creators.
-
-## Usage
-
-Video of Usage
-![Video of Usage](https://github.com/rmmccar92/PodCentral/blob/main/assets/PC_demo.gif)
 
 ## License
 
