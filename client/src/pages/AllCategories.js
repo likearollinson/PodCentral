@@ -3,29 +3,9 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import CategoryCard from '../components/CategoryCard';
 
-export default function AllCategories({
-  categoryName,
-  categoryImage,
-  categoryRedirect,
-}) {
+const AllCategories = () => {
   return (
     <Box flexGrow={1}>
-      {/* <Box
-        sx={{
-          flexGrow: 1,
-          width: 'auto',
-          fontSize: 64,
-          fontWeight: 'bold',
-          ml: '50px',
-          mt: '50px',
-          mb: '50px',
-          letterSpacing: 8,
-        }}
-      >
-        <p className="wYl-font">DISCOVER</p>
-        <p className="wYl-font2">PODCASTS</p>
-      </Box> */}
-
       <Box
         className="boxColor"
         sx={{
@@ -123,3 +103,5 @@ export default function AllCategories({
     </Box>
   );
 }
+
+export default AllCategories;

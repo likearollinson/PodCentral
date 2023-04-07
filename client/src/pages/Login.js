@@ -36,7 +36,6 @@ const Login = (props) => {
   };
 
   return (
-
     <div>
       <Box
         mt="70px"

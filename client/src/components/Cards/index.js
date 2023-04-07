@@ -10,12 +10,11 @@ import { LIKE_PODCAST } from "../../utils/mutations";
 import { getPodcastIds, savePodcastIds } from "../../utils/localStorage";
 import Auth from "../../utils/auth";
 
-export default function Cards(props) {
+const Cards = (props) => {
   const [likedPodcastIds, setLikedPodcastIds] = useState(getPodcastIds());
   useEffect(() => {
     return () => savePodcastIds(likedPodcastIds);
   });
-  // const podcastData = { ...props };
 
   const [likePodcast] = useMutation(LIKE_PODCAST);
   const handleLike = async (podcastId) => {
@@ -24,7 +23,6 @@ export default function Cards(props) {
       description: props.description,
       image: props.image,
     };
-    // console.log(props.podcastId);
 
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -90,3 +88,5 @@ export default function Cards(props) {
     </Card>
   );
 }
+
+export default Cards;

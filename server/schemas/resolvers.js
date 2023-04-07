@@ -87,14 +87,12 @@ const resolvers = {
         try {
           const newPodcast = await Podcast.create(args.input);
           console.log(newPodcast);
-          // return newPodcast;
 
           const updateUserPodcast = await User.findOneAndUpdate(
             { _id: context.user._id },
             { addedPodcast: newPodcast._id },
             { new: true, runValidators: true }
           );
-          // console.log(updateUserPodcast);
         } catch (err) {
           console.log(err);
         }
@@ -103,10 +101,7 @@ const resolvers = {
     addEpisode: async (parent, args, context) => {
       if (context.user) {
         try {
-          // console.log(args.input);
-          // console.log(context.user);
           const newEpisode = await Episode.create(args.input);
-          // console.log(newEpisode);
           const user = await User.findOne({ _id: context.user._id });
           const updatePodcast = await Podcast.findOneAndUpdate(
             { _id: user.addedPodcast },

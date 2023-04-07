@@ -10,7 +10,7 @@ import Grid from '@mui/material/Grid';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
-function Signup(props) {
+const Signup = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser, { error }] = useMutation(ADD_USER);
 

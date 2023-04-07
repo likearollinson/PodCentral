@@ -14,7 +14,6 @@ import CloudinaryWidget from "../Cloudinary";
 const PublishNewPodcast = () => {
   const { loading, data } = useQuery(GET_ME);
   const userData = data?.me || [];
-  // console.log(userData);
   const [formState, setFormState] = useState({
     title: "",
     description: "",
@@ -25,7 +24,6 @@ const PublishNewPodcast = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const podcastImage = localStorage.getItem("podcastImage");
-    // console.log(podcastImage);
     try {
       const { data } = await addPodcast({
         variables: {

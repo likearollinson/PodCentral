@@ -25,7 +25,6 @@ const styles = {
 const PublishProfile = () => {
   const { loading, data } = useQuery(GET_ME);
   const userData = data?.me || [];
-  // const [episodes, setEpisodes] = useState(...userData.addedPodcast.episodes);
 
   const [formState, setFormState] = useState({
     title: "",
@@ -39,7 +38,6 @@ const PublishProfile = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const podcastImage = localStorage.getItem("podcastImage");
-    // console.log(podcastImage);
     try {
       const { data } = await addEpisode({
         variables: {

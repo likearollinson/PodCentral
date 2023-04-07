@@ -45,10 +45,7 @@ const Player = (props) => {
     const [position, setCurrentTime] = useState(0);
 
     audio.addEventListener("loadedmetadata", () => {
-        // console.log("duration:", audio.duration);
         setDuration(audio.duration);
-
-        // console.log("current time", audio.currentTime);
         setCurrentTime(audio.currentTime);
     });
     useEffect(() => {
@@ -64,13 +61,7 @@ const Player = (props) => {
         []
     );
 
-
-    // const [durationAudio] = useState(new Audio(props.audio))
-    // const [duration, setDuration] = useState(0);
-
     const theme = useTheme();
-
-    // const [position, setPosition] = React.useState(0);
 
     const Widget = styled('div')(({ theme }) => ({
         padding: 16,
@@ -134,8 +125,6 @@ const Player = (props) => {
             </Box>
         );
     }
-
-    // console.log("audio time: ", audio.currentTime);
 
     return (
         <Box flexGrow={1}>

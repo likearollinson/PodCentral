@@ -2,43 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Grow from '@mui/material/Grow';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { useMediaQuery } from 'react-responsive';
 
 import podcast2017 from '../assets/best-pods-2017.jpg';
 import podcast2019 from '../assets/best-pods-2019.jpg';
-
-const styles = {
-  podcastLogo: {
-    display: 'block',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    width: '150px',
-  },
-  lowerImage: {
-    display: 'block',
-    width: '150px',
-  },
-};
-
-const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 768 })
-  return isDesktop ? children : null
-}
-const Tablet = ({ children }) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
-  return isTablet ? children : null
-}
-const Mobile = ({ children }) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
-  return isMobile ? children : null
-}
-const Default = ({ children }) => {
-  const isNotMobile = useMediaQuery({ minWidth: 768 })
-  return isNotMobile ? children : null
-}
 
 const Home = () => {
 

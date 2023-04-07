@@ -24,14 +24,11 @@ const styles = {
 
 const PodCentralPodcast = () => {
   const { _id } = useParams();
-  // console.log("param: ", _id)
   const { loading, data } = useQuery(QUERY_SINGLE_PODCAST, {
     variables: { _id: _id },
   });
   const podcastData = data?.podcast || [];
-  // console.log("podcastData:", podcastData);
   const podcastArr = Object.values(podcastData);
-  // console.log(podcastArr)
 
   const title = podcastArr[2];
   const description = podcastArr[3];

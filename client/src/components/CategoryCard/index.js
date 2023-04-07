@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 
-export default function CategoryCard(props) {
+const CategoryCard = (props) => {
   const [podcastData, setPodcastData] = useState("");
 
   const handleClick = () => {
@@ -50,3 +50,5 @@ export default function CategoryCard(props) {
     </a>
   );
 }
+
+export default CategoryCard;

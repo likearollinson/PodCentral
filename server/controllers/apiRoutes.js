@@ -5,26 +5,6 @@ require('dotenv').config({ path: './.env' });
 
 const client = Client({ apiKey: process.env.API_KEY });
 
-router.get("/popularPodcasts", async (req, res) => {
-  try {
-    client
-      .fetchBestPodcasts({
-        region: "us",
-        sort: "listen_score",
-        safe_mode: 0,
-      })
-      .then((response) => {
-        // Get response json data here
-        res.json(response.data.podcasts);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  } catch (err) {
-    console.error(err);
-  }
-});
-
 router.get("/business", async (req, res) => {
   try {
     client
@@ -129,6 +109,28 @@ router.get("/popCulture", async (req, res) => {
     console.error(err);
   }
 });
+
+router.get("/popularPodcasts", async (req, res) => {
+  try {
+    client
+      .fetchBestPodcasts({
+        region: "us",
+        sort: "listen_score",
+        safe_mode: 0,
+      })
+      .then((response) => {
+        // Get response json data here
+        res.json(response.data.podcasts);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  } catch (err) {
+    console.error(err);
+  }
+});
+
+
 router.get("/trueCrime", async (req, res) => {
   try {
     client
@@ -150,4 +152,3 @@ router.get("/trueCrime", async (req, res) => {
   }
 });
 
-// module.exports = router;

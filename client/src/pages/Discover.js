@@ -42,12 +42,9 @@ const Discover = () => {
       .then((res) => res.json())
       .then((data) => {
         setPodcastData(data);
-        // console.log("all podcast data from data attribute", data);
-        // console.log("title from data attribute", data[0].title);
       });
   }, []);
 
-  // console.log("likedPodcasts: ", likedPodcastIds);
   const categoriesArr = [
     {
       image:
@@ -92,7 +89,6 @@ const Discover = () => {
       key: 6,
     },
   ];
-  // console.log(categoriesArr);
   const popularArr = [];
   const populateArr = () => {
     for (let i = 0; i < 6; i++) {
