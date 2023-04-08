@@ -1,7 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { createTheme } from "@mui/material/styles";
@@ -9,10 +7,7 @@ import { ThemeProvider } from "@emotion/react";
 import { useState, useEffect } from "react";
 import Cards from "../components/Cards";
 import CategoryCard from "../components/CategoryCard";
-import { useQuery, useMutation } from "@apollo/client";
-import { getPodcastIds, savePodcastIds } from "../utils/localStorage";
-import Auth from "../utils/auth";
-import { LIKE_PODCAST } from "../utils/mutations";
+import { useQuery } from "@apollo/client";
 import { QUERY_ALL_PODCASTS } from "../utils/queries";
 
 const theme = createTheme({

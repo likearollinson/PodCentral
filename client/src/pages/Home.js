@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import { useMediaQuery } from 'react-responsive';
 
 import podcast2017 from '../assets/best-pods-2017.jpg';
 import podcast2019 from '../assets/best-pods-2019.jpg';

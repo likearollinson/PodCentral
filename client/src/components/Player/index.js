@@ -4,14 +4,10 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Slider from '@mui/material/Slider';
 import IconButton from '@mui/material/IconButton';
-import Stack from '@mui/material/Stack';
-import Grow from '@mui/material/Grow';
 import PauseRounded from '@mui/icons-material/PauseRounded';
 import PlayArrowRounded from '@mui/icons-material/PlayArrowRounded';
 import FastForwardRounded from '@mui/icons-material/FastForwardRounded';
 import FastRewindRounded from '@mui/icons-material/FastRewindRounded';
-import VolumeUpRounded from '@mui/icons-material/VolumeUpRounded';
-import VolumeDownRounded from '@mui/icons-material/VolumeDownRounded';
 
 const TogglePlay = audio => {
     const [playing, setPlaying] = useState(false);

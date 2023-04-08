@@ -17,6 +17,7 @@
     "jwt-decode": "^2.2.0",
     "material-ui-audio-player": "^1.7.1",
     "react": "^16.13.1",
+    "react-cloudinary-upload-widget": "^1.7.5",
     "react-dom": "^16.13.1",
     "react-responsive": "^9.0.0-beta.5",
     "react-router-dom": "^5.1.2",
